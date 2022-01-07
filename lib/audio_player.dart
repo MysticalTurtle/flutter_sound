@@ -31,9 +31,9 @@ class SoundPlayer {
 
   Future togglePlaying({required VoidCallback whenFinished}) async {
     if (_audioPlayer!.isStopped) {
-      play(whenFinished);
+      await play(whenFinished);
     } else {
-      stop();
+      await stop();
     }
   }
 
